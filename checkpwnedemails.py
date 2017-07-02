@@ -50,6 +50,7 @@ def get_results(email_list, service, opts):
 	results = []  # list of tuples (email adress, been pwned?, json data)
 
 	for email in email_list:
+		sleep(2)
 		email = email.strip()
 		data = []
                 req  = urllib2.Request(PWNED_API_URL % (urllib.quote(service), urllib.quote(email)), headers=HEADERS)
